@@ -1,7 +1,51 @@
+/* Body*/
+body h1{
+    font-family: system-ui, sans-serif;
+
+  
+}
+body p{
+  font-family: Verdana, sans-serif;
+  
+}
+
 /* Header*/
-.header  {
-    display:flex;
-   justify-content: space-around;
-  align-items: center;        
+header{
+position: sticky;
+top: 0px;
+background: rgba(255, 255, 255, 0.2); 
+backdrop-filter: blur(10px); /* efecto glass/frosted */
 
 }
+
+.header  {
+  color: #1f1f1f;
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.botones{
+  display: flex;
+  gap: 20px;
+  
+}
+.botones a{
+  color: #1f1f1f;
+
+}
+
+.botones a:hover {
+  color: #000000;        /* cambia de color al hacer hover */
+  letter-spacing: 1.5px;  /* separa un poco las letras */
+}
+
+
+/* 
+Paleta i espais coherents a totes les pàgines. - PENDIENTE
+Navbar present a totes les pàgines amb enllaços interns (Home, Galeria, Guia d’estil). - SI
+Navbar sticky amb efecte glass/frosted (blur) i hover states als enllaços. - SI
+Google Fonts: incorpora com a mínim dues famílies (una per títols i una per text) amb pesos variables. - SI
+Material Icons: fes servir la família Outlined en botons i enllaços d’acció.- PENDIENTE
+Responsive: breakpoint mínim a 768px (versió PC i mòbil)- PENDIENTE
+*/
