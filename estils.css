@@ -1,11 +1,13 @@
+@import url(https://fonts.googleapis.com/css2?family=Quicksand:wght@400&family=SUSE+Mono:wght@400&display=swap);
+
 /* Body*/
-body h1{
-    font-family: system-ui, sans-serif;
+h1{
+    font-family: "Quicksand", sans-serif;
 
   
 }
-body p{
-  font-family: Verdana, sans-serif;
+p, a, button{
+  font-family: "SUSE Mono", monospace;
   
 }
 
@@ -38,8 +40,14 @@ backdrop-filter: blur(10px); /* efecto glass/frosted */
 .botones a:hover {
   color: #000000;        /* cambia de color al hacer hover */
   letter-spacing: 1.5px;  /* separa un poco las letras */
+  font-weight: bold;
 }
 
+.img_section1_Index{
+   width: 15rem;
+  height: 20rem;
+  object-fit: cover;
+}
 
 /* 
 Paleta i espais coherents a totes les pàgines. - PENDIENTE
