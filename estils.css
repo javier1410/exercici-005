@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Quicksand:wght@400&family=SUSE+Mono:wght@400&display=swap);
+/*---------------------INDEX-------------*/
 
-/* Body*/
+/* fuentes*/
 h1{
     font-family: "Quicksand", sans-serif;
 
@@ -43,10 +44,43 @@ backdrop-filter: blur(10px); /* efecto glass/frosted */
   font-weight: bold;
 }
 
+
+
+main{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+.section1-Index{
+  display: flex;
+  gap: 3rem;
+  justify-content: space-around;
+  margin-bottom: 5rem;
+  text-align: center;
+  
+}
+
 .img_section1_Index{
-   width: 15rem;
+  width: 15rem;
   height: 20rem;
   object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)
+  
+}
+
+.titul_manga{
+  font-weight: bold;
+}
+.section2-Index{
+  display: flex;
+  gap: 3rem;
+  justify-content: space-around;
+  text-align: center;
+
+
 }
 
 /* 
