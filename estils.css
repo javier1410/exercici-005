@@ -61,15 +61,56 @@ main{
   text-align: center;
   
 }
-
-.img_section1_Index{
+.Manga-imgs{
+  position: relative;
+  overflow: hidden;
   width: 15rem;
   height: 20rem;
-  object-fit: cover;
   border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)
+  box-shadow: 0 8px 22px rgba(0,0,0,0.2);
+  transition: transform 0.6s,box-shadow 0.6s;
+  
   
 }
+.Manga-imgs:hover{
+ transform: scale(1.2);
+box-shadow: 0 8px 22px rgba(0,0,0,0.8);
+}
+
+/* SUPERPOSAR les dues imatges */
+.Manga-imgs img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: opacity 1s ease;
+}
+
+/* Imatge inicial visible */
+.img_section1_Index_front {
+  opacity: 1;
+}
+
+/* Imatge del hover amagada */
+.img_section1_Index_back {
+  opacity: 0;
+}
+
+/*  HOVER A TOT EL CONTENIDOR */
+.Manga-imgs:hover .img_section1_Index_front {
+  opacity: 0;
+  
+}
+
+.Manga-imgs:hover .img_section1_Index_back {
+  opacity: 1;
+ 
+}
+
+
+
 
 .titul_manga{
   font-weight: bold;
@@ -84,7 +125,7 @@ main{
 }
 
 /* 
-Paleta i espais coherents a totes les pàgines. - PENDIENTE
+Paleta i espais coherents a totes les pàgines. - SI
 Navbar present a totes les pàgines amb enllaços interns (Home, Galeria, Guia d’estil). - SI
 Navbar sticky amb efecte glass/frosted (blur) i hover states als enllaços. - SI
 Google Fonts: incorpora com a mínim dues famílies (una per títols i una per text) amb pesos variables. - SI
