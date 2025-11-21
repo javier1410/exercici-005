@@ -162,3 +162,42 @@ box-shadow: 0 8px 22px rgba(0,0,0,0.8);
 
 
 /*---------------------Galeria-estils-------------*/
+
+/*----Loader----*/
+.loader{
+  width: 7rem;
+  height: 7rem;
+  border: 10px solid rgb(217, 217, 217);
+  border-top:10px solid #000000 ;
+  border-radius: 50%;  /*que sea redondo*/
+  animation:spin 1.5s ease-in-out infinite;
+}
+@keyframes spin{
+  0%{
+    transform: rotate(0deg);
+  }
+
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+/*----Caja Animada----*/
+.caja_animacion{
+  width: 7rem;
+  height: 7rem;
+  border: 10px solid rgb(0, 0, 0);
+  border-radius: 15%;  /*que sea redondo*/
+  background-color: rgb(11, 1, 51);
+
+  animation: fadeAnim 2s ease-in-out infinite alternate;  /*opacidad*/
+}
+
+@keyframes fadeAnim {  /*animacion opacidad*/
+  0% {
+    opacity: 0.05;
+  }
+  100% {
+    opacity: 1;
+  }
+}
