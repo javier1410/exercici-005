@@ -163,6 +163,21 @@ box-shadow: 0 8px 22px rgba(0,0,0,0.8);
 
 /*---------------------Galeria-estils-------------*/
 
+.section2_animacion {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;  /* TITULO A LA IZQUIERDA */
+  
+}
+
+/* CENTRAR SOLO LA CAJA */
+.caja_animacion {
+  align-self: center;     /* ← centro horizontal */
+  
+}
+
+
 /*----Loader----*/
 .loader{
   width: 7rem;
@@ -183,21 +198,107 @@ box-shadow: 0 8px 22px rgba(0,0,0,0.8);
 }
 
 /*----Caja Animada----*/
+.section2_animacion{
+ 
+  height: 35rem;
+  
+}
+
+
 .caja_animacion{
   width: 7rem;
   height: 7rem;
   border: 10px solid rgb(0, 0, 0);
-  border-radius: 15%;  /*que sea redondo*/
+  border-radius: 15%; 
   background-color: rgb(11, 1, 51);
+   
+  animation: bounceAndSpin 3s ease-in-out infinite; /*lento rapido lento*/
 
-  animation: fadeAnim 2s ease-in-out infinite alternate;  /*opacidad*/
+ 
 }
 
-@keyframes fadeAnim {  /*animacion opacidad*/
+@keyframes bounceAndSpin {
   0% {
-    opacity: 0.05;
+    transform: translate(0, 0) rotate(0deg); /*movimiento*/
+    opacity: 0.4;
+    background-color: #ff4b81;  
   }
-  100% {
+
+  25% {
+    transform: translate(5rem, 5rem) rotate(8deg); 
     opacity: 1;
+    background-color: #ffb347;  
+  }
+
+  50% {
+    transform: translate(0rem, 10rem) rotate(0deg) ;
+    opacity: 0.8;
+    background-color: #4bc0ff;  
+  }
+
+  75% {
+    transform: translate(-5rem, 15rem) rotate(-8deg) ;
+    opacity: 1;
+    background-color: #8a5cff;  
+  }
+
+  100% {
+    transform: translate(0, 20rem) rotate(0deg) ;
+    opacity: 0.4;
+    background-color: #ff4b81; 
   }
 }
+
+/*----Scroll-reveal----*/
+.section3_scroll-reveal {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+ 
+}
+
+.reveal-block {
+  opacity: 0;
+  background-color: #ffb2d9;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+ border:solid 0.2rem #000000;
+
+  /*  Animación scroll-driven*/
+  animation: revealUp 3s ease-out;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+@keyframes revealUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@supports not (animation-timeline: view()) {
+
+  /* animación alternativa */
+  .reveal-block {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fallbackFade 0.8s ease-out forwards;
+  }}
+
+  @keyframes fallbackFade {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
