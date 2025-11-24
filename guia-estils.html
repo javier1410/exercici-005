@@ -1,52 +1,113 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="estils.css">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="estils.css">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:FILL@0;1&wght@200;400;700" rel="stylesheet" />
 
 
+    </head>
+    <body>
+        
+    <header>
+        <div class="header">
+            <p class="logo">Manga Gallery</p>
+            <nav class="botones">
+                <a href="index.html">Home</a>
+                <a href="galeria-estils.html">Galeria</a>
+                <a href="guia-estils.html">Guia d'estil</a>
+            </nav>
+        </div>
+    </header> 
 
- <!-- Iconos importar-->
-</head>
-<body>
-    
- <header>
-    <div class="header">
-        <p class="logo">Manga Gallery</p>
-        <nav class="botones">
-            <a href="index.html">Home</a>
-            <a href="galeria-estils.html">Galeria</a>
-            <a href="guia-estils.html">Guia d'estil</a>
-        </nav>
-    </div>
-</header> 
+    <section class="font-section">
+         <h2 class="titulo_guia_estil">1. Mostrari de fonts</h2>
 
-<section class="font-section">
-
-    <h1 class="demo_h1">Manga 1 — Berserk</h1>
-    <h2 class="demo_h2">Manga 2 — Vagabond</h2>
-    <h3 class="demo_h3">Manga 3— Air gear</h3>
-
-
-</section>
+        <h1 class="demo_h1">Manga 1 — Berserk</h1>
+        <h2 class="demo_h2">Manga 2 — Vagabond</h2>
+        <h3 class="demo_h3">Manga 3— Air gear</h3>
 
 
-<section class="baseline-section">
+    </section>
 
-    <h2>Alineació d'icones i text</h2>
+
+ <section class="baseline-section">
+
+    <h2 class="titulo_guia_estil">2. Alineació a baseline</h2>
 
     <div class="baseline-example">
-        
-            <span class="material-symbols-outlined">home</span>
+        <span class="material-symbols-rounded baseline-icon">home</span>
+        <p class="baseline-text">Inici — Exemple de baseline</p>
+    </div>
 
-        
+    <div class="baseline-example">
+        <span class="material-symbols-rounded baseline-icon">favorite</span>
+        <p class="baseline-text">Favorits — Exemple de baseline</p>
+    </div>
+
+
+
+     <div class="baseline-example">
+        <span class="material-symbols-rounded baseline-icon">star</span>
+        <p class="baseline-text">Star — Exemple de baseline</p>
     </div>
 
 </section>
 
 
-</body>
-</html>
+<section class="iconos-section">
+  <h2 class="titulo_guia_estil">3. Material Icons — mides i pesos</h2>
+
+  <div class="iconos_flex">
+    <div class="iconos_individual">
+      <span class="material-symbols-rounded icon-24 icon-regular">home</span>
+      <p class="icon-caption">Mida: 24px · wght: 400 · FILL: 0</p>
+    </div>
+
+    <div class="iconos_individual">
+      <span class="material-symbols-rounded icon-36 icon-bold">home</span>
+      <p class="icon-caption">Mida: 36px · wght: 700 · FILL: 0</p>
+    </div>
+
+    <div class="iconos_individual  ">
+     <span class="material-symbols-rounded icon-48 icon-fill">home</span>
+      <p class="icon-caption">Mida: 48px · wght: 400 · FILL: 1</p>
+    </div>
+  </div>
+</section>
+
+<!-- 4. Botons i links amb icona -->
+<section class="buttons-section">
+  <h2 class="titulo_guia_estil">4. Botons i enllaços amb icona</h2>
+
+  <div class="buttons-row">
+    <button class="btn-icon">
+      <span class="material-symbols-rounded">favorite</span>
+      <span>Afegir a favorits</span>
+    </button>
+
+    <a href="#" class="link-icon">
+      <span class="material-symbols-rounded">arrow_forward</span>
+      <span>Veure més detalls</span>
+    </a>
+  </div>
+</section>
+
+<section class="colors-section">
+  <h2 class="titulo_guia_estil">5. Colors — formats CSS</h2>
+
+  <div class="color-demo">
+    <div class="tabla"></div>
+
+    <p><strong>HEX:</strong> #ff4b81</p>
+    <p><strong>RGB:</strong> rgb(255, 75, 129)</p>
+    <p><strong>HSL:</strong> hsl(342, 100%, 65%)</p>
+    <p><strong>Alpha:</strong> rgba(255, 75, 129, 0.4)</p>
+  </div>
+</section>
+
+
+    </body>
+    </html>
